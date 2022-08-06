@@ -14,10 +14,10 @@ relay.relayServer(tcpPort);
 const net = require("net");
 const client = new net.Socket();
 
-const host = "localhost";
-// const host = process.env.HOST_IPADDRESS;
-const webPort = 3000;
-// const webPort = 80;
+// const host = "localhost";
+const host = process.env.HOST_IPADDRESS;
+// const webPort = 3000;
+const webPort = 80;
 
 console.log(__dirname);
 
@@ -28,6 +28,7 @@ client.on("data", (data) => {
     io.emit("ichigojam message",DATA);
 });
 
+// * エンドポイント /app/e-remocon"
 app.get("/app/e-remocon", (req,res) => {
     res.sendFile(__dirname + "/index.html");
 });
@@ -60,7 +61,7 @@ app.get("/app/e-remocon", (req,res) => {
     app.post("/air-power2", (req,res) => {
         let airPower2 = req.body.airPower2;
         client.write(airPower2);
-        console.log("air-powe2r:" + airPower2);
+        console.log("air-power2:" + airPower2);
         res.sendFile(__dirname + "/index.html");
     });
 

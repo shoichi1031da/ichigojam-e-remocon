@@ -3,8 +3,8 @@ const tcpServer = net.createServer();
 
 require('dotenv').config();
 const tcpServerPort = process.env.TCP_SERVER_PORT; 
-// const host = process.env.HOST_IPADDRESS;
-const host = process.env.LOCAL_HOST_IPADDRESS;
+const host = process.env.HOST_IPADDRESS;
+// const host = process.env.LOCAL_HOST_IPADDRESS;
 
 let clientType, clientNum, IPaddress;
 let clients = [];

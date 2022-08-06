@@ -1,0 +1,30 @@
+10 ?"MJ TCP IPaddress port"
+20 CLS:?
+30 OUT63:CLV
+40 A=#700:Z=A+7:POKEZ+1,0
+
+'予約語（18個）の設定
+50 N=18:LET[1],"AIR-ON1","AIR-OFF1","DRY1","COOL1","HEAT1","HIGH1","LOW1","AIR-ON2","AIR-OFF2","DRY2","COOL2","HEAT2","HIGH2","LOW2","TV-ON","TV-OFF","NEXT","BACK"
+
+'サーバーから受け取る文字列の先頭は@
+60 K=INKEY():IF K!=ASC("@") CONT
+
+'受け取った文字列をメモリの#700から順に書き込む
+70 FOR I=A TO Z
+80 POKEI,INKEY():IF PEEK(I)=0 CONT
+90 IF PEEK(I)=32 POKEI,0
+100 NEXT
+
+'受け取った文字列と予約語（配列1番〜N番）の照合
+110 FOR I=1 TO N
+120 F=0
+130  FOR J=0 TO LEN([I])-1
+140  F=F+(PEEK([I]+J)=PEEK(A+J))
+150  NEXT
+160  IF F=LEN([I]) P=I
+170 NEXT
+
+'実行する命令（予約後）を出力
+180 ?STR$([P])
+190 OUTP,0:WAIT60:OUTP,1
+200 GOTO30
