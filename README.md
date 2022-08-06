@@ -45,7 +45,7 @@ IchigoJamのサンプルコードtxtファイルと、コメント付きのtxt�
 
 https://github.com/shoichi1031da/ichigojam-e-remocon-app/blob/main/public/ichigojam-sample-code
 
-### その他
+### ■その他
 
 質問などはTwitterのDMからお願いします。
 
