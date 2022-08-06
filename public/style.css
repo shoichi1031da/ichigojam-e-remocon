@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'kodomo';
+    src: url("../kodomo.woff")format('woff');
+  }
+
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column;
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro";
+}
+
+#title{
+    color:rgb(83, 184, 78);
+    font-size: 150%;
+    font-family: "kodomo";
+    align-self: center;
+    margin:10px;
+}
+
+#container{
+    background-color: rgb(229, 255, 229);
+    padding: 25px 30px;
+    box-shadow: 10px 11px 20px 0px rgb(0 0 0 / 40%);
+    border-radius: 30px;
+    align-self: center;
+    display: flex;
+    flex-flow: column;
+}
+
+    #washitsu{
+        background-color: rgb(201, 230, 255);
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        
+    }
+
+    #living{
+        background-color: rgb(248, 224, 185);
+        border-radius: 20px;
+        
+
+    }
+
+    #device-name{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 130%;
+        font-weight: bold;
+        align-self: center;
+    }
+
+        form{
+            /* margin:20px 10px; */
+            padding:15px 20px;
+        }
+
+        #btn{
+            width: 55px;
+            height: 55px;
+            font-size: 100%;
+            margin-left: 15px;
+            
+            color:black;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10%;
+            border: 0.5px solid rgb(219, 219, 219);
+            /* border: none; */
+        }
+        #btn:hover{
+            background-color: rgb(227, 227, 227);
+        }
+
+#messages{
+    color:rgb(111, 111, 111);
+    width: 100%;
+    max-width: 200px;
+    min-height: 30px;
+    background-color: rgb(243, 243, 243);
+    margin: 20px;
+    border-radius: 5px;
+    align-self: center;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>IchigoJamリモコン</title>
+</head>
+<body>
+    <div id="title">＼ IchigoJamリモコン ／</div>
+
+    <div id="container">
+        <div id="device-name" style="color: rgb(134, 191, 252);">エアコン（和室）</div>
+
+        <div id="washitsu">
+            <form method="post" action="/air-power1">
+                <div id="air-power-btns1">電源</div>
+            </form>
+
+            <form method="post" action="/air-mode1">
+                <div id="air-mode-btns1">運転</div>
+            </form>
+
+            <form method="post" action="/air-temp1">
+                <div id="air-temp-btns1">温度</div>
+            </form>
+        </div>
+        
+        <div id="device-name" style="color: rgb(228, 188, 114);">エアコン（居間）</div>
+
+        <div id="living">
+            <form method="post" action="/air-power2">
+                <div id="air-power-btns2">電源</div>
+            </form>
+
+            <form method="post" action="/air-mode2">
+                <div id="air-mode-btns2">運転</div>
+            </form>
+
+            <form method="post" action="/air-temp2">
+                <div id="air-temp-btns2">温度</div>
+            </form>
+        </div>
+
+        <div id="device-name" style="color: rgb(228, 188, 114);">テレビ（居間）</div>
+        <div id="living">    
+
+            <form method="post" action="/tv-power">
+                <div id="tv-power-btns">　 電源　 </div>
+            </form>
+
+            <form method="post" action="/tv-channel">
+                <div id="tv-channel-btns">チャンネル</div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="messages">
+        <ul id="ichigojam-messages"></ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
